@@ -1,0 +1,3 @@
+[run]
+source = people_dir
+omit = people_dir/test*

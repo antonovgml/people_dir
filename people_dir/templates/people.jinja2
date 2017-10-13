@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hello From Flask</title>
+  </head>
+  
+  <body>
+    <h1>
+	  List of people:
+    </h1>
+    <table>
+	<tr>
+		<th>#</th>
+		<th>Name</th>
+		<th>Date of Birth</th>
+		<th>ID</th>
+	<tr>
+ 	{% for person in people %}
+	<tr>
+		<td>
+ #
+		</td>	
+		<td>
+			{{ person.lname }}, {{ person['fname'] }}
+		</td>
+		<td>
+			{{person['birthdate'].strftime('%Y-%m-%d')}}
+		</td>
+		<td>
+			{{person['_id']}}
+		</td>
+
+	</tr>
+
+	{% endfor %}
+    </table>	
+  </body>
+
+</html>

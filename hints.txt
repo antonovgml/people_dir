@@ -1,0 +1,8 @@
+#run dev server with reload changes
+pserve development.ini --reload
+
+# install/update all python dependencies based on setup.py
+pip install -e . 
+
+# run tests and code coverage
+venv\Scripts\py.test --cov --cov-report=term-missing 
